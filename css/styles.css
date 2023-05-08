@@ -1,0 +1,135 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  color: white;
+  background-image: url('https://img.freepik.com/foto-gratis/experiencia-programacion-persona-que-trabaja-codigos-computadora_23-2150010125.jpg?w=1060&t=st=1683561523~exp=1683562123~hmac=62680759651e88235d336edb431c008f7f35e3ae7eceff8ee3b48f7d4a5ac7d9');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+/*Estilos del Header*/
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: rgba(0,0,0,0.5);
+}
+
+/*Estilos del LOGO */
+header img {
+  width: 100px;
+  height: auto;
+  margin-left: 15%;
+  margin-right: 70rem;
+}
+
+/*Estilos del NAV*/
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: 700;
+}
+
+nav a:hover {
+    color: yellow;
+    text-decoration: underline;
+}
+
+p {
+  background-color: rgba(0,0,0,0.6);
+  color: #fff;
+  padding: 10px;
+}
+
+/*Estilos etiqueta MAIN */
+
+main {
+  display: flex;
+  min-height: 500px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+}
+
+h1, img {
+  flex: 0 0 auto;
+}
+
+img {
+    max-width: 60%;
+}
+
+.block-div {
+    display: inline-block;
+    box-shadow: 2px 2px 5px #ddd;
+    width: 60%;
+}
+
+.block-div::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right: 10px solid #ddd;
+    position: absolute;
+    right: -10px;
+    bottom: -10px;
+  }
+
+  /*ESTILOS FOOTER*/
+
+  footer {
+    background-color: rgba(0,0,0,0.5);
+    color: #fff;
+    padding: 30px;
+    text-align: center;
+  }
+  
+  .contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .contact p {
+    margin-right: 10px;
+  }
+  
+  .contact a img {
+    width: 60px;
+    margin-right: 10px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .contact a:hover img {
+    transform: scale(1.2);
+  }

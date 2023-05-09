@@ -1,11 +1,8 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
   justify-content: center;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   align-items: center;
   font-family: Arial, sans-serif;
   color: white;
@@ -19,24 +16,22 @@ body {
 
 header {
   display: flex;
-  justify-content: center;
+  width: 100%;
+  justify-content: space-around;
   align-items: center;
   padding: 20px;
-  background-color: rgba(0,0,0,0.5);
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 /*Estilos del LOGO */
 header img {
   width: 100px;
   height: auto;
-  margin-left: 15%;
-  margin-right: 70rem;
 }
 
 /*Estilos del NAV*/
 nav {
   display: flex;
-  justify-content: center;
   align-items: center;
 }
 
@@ -48,21 +43,83 @@ nav ul {
   margin: 0;
 }
 
-nav a {
+a {
   text-decoration: none;
-  color: white;
-  font-weight: 700;
+  color: inherit;
+}
+a:hover {
+  color: yellow;
+  text-decoration: underline;
+  transition: transform 0.3s ease-in-out;
 }
 
-nav a:hover {
-    color: yellow;
-    text-decoration: underline;
+/* ESTILOS MENU HAMBURGUESA */
+
+.hamburger {
+  display: none;
+  cursor: pointer;
 }
 
-p {
-  background-color: rgba(0,0,0,0.6);
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 5px;
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 60px;
+  cursor: pointer;
   color: #fff;
-  padding: 10px;
+  z-index: 2;
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  nav ul.nav-links {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.9);
+    list-style: none;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .nav-links.show {
+    transform: translateX(0%);
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  nav a {
+    font-size: 4rem;
+  }
+
+  nav ul {
+    display: none;
+  }
+}
+
+@media (min-width: 1025px) {
+  .hamburger {
+    display: none;
+  }
+
+  nav ul {
+    display: flex;
+  }
 }
 
 /*Estilos etiqueta MAIN */
@@ -74,62 +131,63 @@ main {
   justify-content: center;
   align-items: center;
   padding: 20px;
-  box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
 }
 
-h1, img {
+h1,
+img {
   flex: 0 0 auto;
 }
 
 img {
-    max-width: 60%;
+  max-width: 60%;
 }
 
 .block-div {
-    display: inline-block;
-    box-shadow: 2px 2px 5px #ddd;
-    width: 60%;
+  display: inline-block;
+  box-shadow: 2px 2px 5px #ddd;
+  width: 60%;
 }
 
 .block-div::after {
-    content: "";
-    display: block;
-    width: 0;
-    height: 0;
-    border-top: 10px solid transparent;
-    border-bottom: 10px solid transparent;
-    border-right: 10px solid #ddd;
-    position: absolute;
-    right: -10px;
-    bottom: -10px;
-  }
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-right: 10px solid #ddd;
+  position: absolute;
+  right: -10px;
+  bottom: -10px;
+}
 
-  /*ESTILOS FOOTER*/
+/*ESTILOS FOOTER*/
 
-  footer {
-    background-color: rgba(0,0,0,0.5);
-    color: #fff;
-    padding: 30px;
-    text-align: center;
-  }
-  
-  .contact {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 20px;
-  }
-  
-  .contact p {
-    margin-right: 10px;
-  }
-  
-  .contact a img {
-    width: 60px;
-    margin-right: 10px;
-    transition: transform 0.3s ease-in-out;
-  }
-  
-  .contact a:hover img {
-    transform: scale(1.2);
-  }
+footer {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  padding: 30px;
+  text-align: center;
+}
+
+.contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.contact p {
+  margin-right: 10px;
+}
+
+.contact a img {
+  width: 60px;
+  margin-right: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.contact a:hover img {
+  transform: scale(1.2);
+}

@@ -17,3 +17,14 @@ closeMenu.addEventListener('click', () => {
         hamburger.style.display = 'block';
     }
 });
+
+document.addEventListener("DOMContentLoaded", function (event) {
+  const loadDisqus = () => {
+    const d = document, s = d.createElement('script');
+    s.src = 'https://my-interactive-resume.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+  }
+
+  loadDisqus();
+});

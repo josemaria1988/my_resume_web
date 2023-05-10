@@ -309,15 +309,8 @@ footer {
   object-fit: contain;
 }
 .small {
-  width: 50%;
+  width: 30%;
   cursor: pointer;
-}
-
-.large {
-width: 100%;
-object-fit: contain;
-overflow: hidden;
-z-index: 9999;
 }
 
 /*MODAL*/

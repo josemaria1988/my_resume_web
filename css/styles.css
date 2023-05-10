@@ -6,7 +6,7 @@ body {
   align-items: center;
   font-family: Arial, sans-serif;
   color: white;
-  background: rgb(8,19,28);
+  background: rgb(8, 19, 28, 0.9);
 }
 
 /*Estilos del Header*/
@@ -23,6 +23,12 @@ header {
 header img {
   width: 150px;
   height: auto;
+}
+
+@media (max-width: 1024px) {
+  header img {
+    width: 100px;
+  }
 }
 
 /*Estilos del NAV*/
@@ -81,7 +87,7 @@ a:hover {
     top: 0;
     right: 0;
     height: 100vh;
-    width: 100%;
+    width: 90%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -133,23 +139,35 @@ a:hover {
     padding: 20px;
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
   }
-  
-  article, aside {
+
+  article,
+  aside {
     width: 45%;
+    margin: 10px;
   }
-  
+
+  aside {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    background: whitesmoke;
+    border-radius: 15px;
+    color: black;
+    padding: 15px;
+  }
+
   .block-div {
     display: inline-block;
     padding: 15px;
     box-shadow: 2px 2px 5px #ddd;
     background-color: rgba(0, 0, 0, 0.5);
   }
-  
+
   .p-index {
     font-size: 18px;
     font-weight: 600;
   }
-  
+
   .block-div::after {
     content: "";
     display: block;
@@ -164,9 +182,12 @@ a:hover {
 
 @media (max-width: 1024px) {
   main {
-    width: 100%;
+    width: 85%;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 15px;
   }
 
   .block-div {
@@ -174,6 +195,21 @@ a:hover {
     padding: 15px;
     box-shadow: 2px 2px 5px #ddd;
     background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  .p-index {
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  aside {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    background: whitesmoke;
+    border-radius: 15px;
+    color: black;
+    padding: 15px;
   }
 
 }
@@ -184,7 +220,8 @@ footer {
   background-color: rgba(0, 0, 0, 0.5);
   color: #fff;
   text-align: center;
-  padding: 15px;
+  padding-top: 15px;
+  padding-bottom: 10px;
 }
 
 .contact {
@@ -203,7 +240,14 @@ footer {
 }
 
 .holberton-footer-img {
-  width: 5%;
+  width: 10%;
+}
+
+@media (max-width: 1024px) {
+
+  .holberton-footer-img {
+    width: 50%;
+  }
 }
 
 /*-------------------TWEETS.HTML--------------*/

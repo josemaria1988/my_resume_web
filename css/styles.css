@@ -6,10 +6,7 @@ body {
   align-items: center;
   font-family: Arial, sans-serif;
   color: white;
-  background-image: url('https://img.freepik.com/foto-gratis/experiencia-programacion-persona-que-trabaja-codigos-computadora_23-2150010125.jpg?w=1060&t=st=1683561523~exp=1683562123~hmac=62680759651e88235d336edb431c008f7f35e3ae7eceff8ee3b48f7d4a5ac7d9');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
+  background: rgb(8,19,28);
 }
 
 /*Estilos del Header*/
@@ -19,7 +16,6 @@ header {
   width: 100%;
   justify-content: space-around;
   align-items: center;
-  padding: 20px;
   background-color: rgba(0, 0, 0, 0.5);
 }
 
@@ -47,10 +43,11 @@ a {
   text-decoration: none;
   color: inherit;
 }
+
 a:hover {
   color: yellow;
   text-decoration: underline;
-  transition: transform 0.3s ease-in-out;
+  transform: scale(1.2);
 }
 
 /* ESTILOS MENU HAMBURGUESA */
@@ -104,7 +101,7 @@ a:hover {
   }
 
   nav a {
-    font-size: 4rem;
+    font-size: 3rem;
   }
 
   nav ul {
@@ -124,70 +121,125 @@ a:hover {
 
 /*Estilos etiqueta MAIN */
 
-main {
-  display: flex;
-  min-height: 500px;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+@media (min-width: 1025px) {
+
+  main {
+    display: flex;
+    min-height: 1024px;
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    padding: 20px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  article, aside {
+    width: 45%;
+  }
+  
+  .block-div {
+    display: inline-block;
+    padding: 15px;
+    box-shadow: 2px 2px 5px #ddd;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .p-index {
+    font-size: 18px;
+    font-weight: 600;
+  }
+  
+  .block-div::after {
+    content: "";
+    display: block;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right: 10px solid #ddd;
+    position: absolute;
+    right: -10px;
+    bottom: -10px;
+  }
 }
 
-h1,
-img {
-  flex: 0 0 auto;
-}
+@media (max-width: 1024px) {
+  main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
 
-img {
-  max-width: 60%;
-}
+  .block-div {
+    display: inline-block;
+    padding: 15px;
+    box-shadow: 2px 2px 5px #ddd;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
 
-.block-div {
-  display: inline-block;
-  box-shadow: 2px 2px 5px #ddd;
-  width: 60%;
-}
-
-.block-div::after {
-  content: "";
-  display: block;
-  width: 0;
-  height: 0;
-  border-top: 10px solid transparent;
-  border-bottom: 10px solid transparent;
-  border-right: 10px solid #ddd;
-  position: absolute;
-  right: -10px;
-  bottom: -10px;
 }
 
 /*ESTILOS FOOTER*/
 
-  footer {
-    background-color: rgba(0,0,0,0.5);
-    color: #fff;
-    padding: 30px;
-    text-align: center;
+footer {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+}
+
+.contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact a img {
+  width: 68px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.contact a:hover img {
+  transform: scale(1.2);
+}
+
+.holberton-footer-img {
+  width: 5%;
+}
+
+/*-------------------TWEETS.HTML--------------*/
+
+.loader {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #3498db;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 2s linear infinite;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes spin {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
   }
-  
-  .contact {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 20px;
+
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
   }
-  
-  .contact p {
-    margin-right: 10px;
-  }
-  
-  .contact a img {
-    width: 100px;
-    margin-right: 10px;
-    transition: transform 0.3s ease-in-out;
-  }
-  
-  .contact a:hover img {
-    transform: scale(1.2);
-  }
+}
+
+.main-tweets {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-tweets>div {
+  width: 25%;
+  box-sizing: border-box;
+}

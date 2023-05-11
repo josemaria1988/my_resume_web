@@ -351,3 +351,27 @@ footer {
   text-decoration: none;
   cursor: pointer;
 }
+
+/*IN CONSTRUCTION */
+
+.construction-main {
+  margin: 0;
+  padding: 0;
+}
+
+.imagen-con-titulo {
+  position: relative;
+  width: 50%;
+}
+
+.imagen-con-titulo img {
+  width: 100%;
+}
+
+.imagen-con-titulo h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+}

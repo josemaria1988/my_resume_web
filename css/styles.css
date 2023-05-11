@@ -156,7 +156,7 @@ a:hover {
   }
 
   .block-div {
-    display: inline-block;
+    display: block;
     padding: 15px;
     box-shadow: 2px 2px 5px #ddd;
     background-color: rgba(0, 0, 0, 0.5);
@@ -164,18 +164,7 @@ a:hover {
 
   .p-index {
     font-size: 18px;
-    font-weight: 600;
-  }
-
-  .block-div::after {
-    content: "";
-    display: block;
-    border-top: 10px solid transparent;
-    border-bottom: 10px solid transparent;
-    border-right: 10px solid #ddd;
-    position: absolute;
-    right: -10px;
-    bottom: -10px;
+    font-weight: 400;
   }
 }
 
@@ -281,10 +270,17 @@ footer {
 
 .main-tweets {
   display: flex;
-  width: 100%;
+  padding: 0;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+}
+@media (max-width: 1024px) {
+  .main-tweets {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 .main-tweets>div {

@@ -418,3 +418,14 @@ form input, form textarea {
 .visible {
   display: block;
 }
+
+/* fixing index last time */
+
+.title-index {
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.p-index {
+  margin: 25px;
+}

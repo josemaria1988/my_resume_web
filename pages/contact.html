@@ -40,11 +40,28 @@
     </div>
   </header>
 
-  <main class="construction-main">
-    <div class="imagen-con-titulo">
-        <img src="/img/in-construction.jpeg" alt="in-construction">
-        <h1>Contact page in construction</h1>
-      </div>
+  <main class="main-contact">
+    <div class="contact-left">
+      <h1>Choose how you wish to contact me</h1>
+      <img id="phone" class="contact-img" src="../img/telefono.png" alt="telefono">
+      <img id="email" class="contact-img" src="../img/email.png" alt="correo">
+      <img id="correoweb" class="contact-img" src="../img/correoweb.png" alt="correoweb">
+    </div>
+    <div class="contact-right">
+      <div id="phoneInfo" class="hidden">Número de teléfono: +1234567890</div>
+
+      <form id="contact-form" class="hidden">
+        <label for="fname">Nombre:</label><br>
+        <input type="text" id="fname" name="fname"><br>
+        <label for="lname">Apellido:</label><br>
+        <input type="text" id="lname" name="lname"><br>
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email"><br>
+        <label for="message">Mensaje:</label><br>
+        <textarea id="message" name="message"></textarea><br>
+        <input type="submit" value="Enviar">
+      </form> 
+    </div>
   </main>
 
   <footer>
@@ -57,7 +74,7 @@
   </footer>
 </body>
 
-<script src="/js/index.js"></script>
-<script src="/js/behavior.js"></script>
+<script src="../js/index.js"></script>
+<script src="/js/contact.js"></script>
 
 </html>
